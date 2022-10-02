@@ -3,6 +3,7 @@ using Api.Contracts.Responces;
 using AutoMapper;
 using DomainLayer.Entities;
 using DomainLayer.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -10,6 +11,7 @@ namespace Api.Controllers.v1
 {
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize]
     public class ShopsController : ControllerBase
     {
         IMapper _mapper;
